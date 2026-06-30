@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-radial {
+    background:
+      radial-gradient(circle at 10% 20%, rgba(124, 156, 255, 0.22), transparent 26%),
+      radial-gradient(circle at 90% 15%, rgba(102, 227, 196, 0.14), transparent 22%),
+      radial-gradient(circle at 50% 85%, rgba(255, 123, 138, 0.10), transparent 24%),
+      linear-gradient(180deg, #09101f 0%, #0b1020 100%);
+  }
+
+  .bg-radial-circle {
+    background: radial-gradient(circle, rgba(124, 156, 255, 0.24), transparent 60%);
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Input datetime-local styling for dark mode */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 0.9;
+}
+
+/* Select dropdown styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23b8c0e0'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Focus visible for better accessibility */
+*:focus-visible {
+  outline: 2px solid rgba(124, 156, 255, 0.65);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+  transition: all 0.25s ease;
+}
