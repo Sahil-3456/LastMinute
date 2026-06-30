@@ -27,7 +27,7 @@ export function Navbar({ activeSection }: NavbarProps) {
       <div className="w-full max-w-max mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between min-h-[74px] gap-5">
           <div className="flex items-center gap-3 font-extrabold tracking-tight">
-            <img src="/logo.png" alt="Logo" className="w-20   h-20" />
+            <img src="./logo.png" alt="Logo" className="w-20   h-20" />
 
             <span className="text-sm md:text-base">The Last-Minute Life Saver</span>
           </div>
